@@ -21,20 +21,27 @@
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5RTLCB0B7"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            
-            gtag('js', new Date());
+        <script type="text/javascript">
+            window.onload = function() {
+                window.dataLayer = window.dataLayer || [];
+                
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                
+                var currentDate = new Date();
 
-            gtag('config', 'G-H5RTLCB0B7');
+                gtag('js', currentDate);
+
+                gtag('config', 'G-H5RTLCB0B7');
+
+                document.getElementById('year').innerHTML = currentDate.getFullYear();
+            }
         </script>
     </head>
 
     <body>
+        <div class="background"></div>
         <div class="wrapper">
             <div class="sidebar">
                 <div class="sidebar-text d-flex flex-column h-100 justify-content-center text-center">
@@ -97,7 +104,11 @@
                 <!-- Footer Start -->
                 <div class="container py-4 bg-secondary text-center">
                     <p class="m-0 text-white">
-                        &copy; <a class="text-white font-weight-bold" href="/">Silas Maciel Ferreira</a>. All Rights Reserved. Based on a <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a> Template
+                        <a id="year" class="text-white font-weight-bold"></a> 
+                        &copy; 
+                        <a class="text-white font-weight-bold" href="/">Silas Maciel Ferreira</a>. 
+                        All Rights Reserved. Based on a <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a> Template. 
+                        Background image on <a class="text-white font-weight-bold" href="https://br.freepik.com/fotos-gratis/lago-laguna-del-inca-cercado-por-altas-montanhas-cobertas-de-neve-no-chile_13901480.htm">Freepik</a>.
                     </p>
                 </div>
                 <!-- Footer End -->
